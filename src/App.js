@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+const URL = 'http://api-rest.ecoquintas.net:3080/api/consulta-cliente/';
 
 function App() {
   // Definimos los estados que vamos a utilizar en nuestra aplicación con useState
@@ -14,7 +15,7 @@ function App() {
     try {
       // Hacemos una petición a nuestra API para buscar el cliente correspondiente a la cédula ingresada.
       const response = await fetch(
-        `http://100.24.114.174:3080/api/consulta-cliente/${cedula}`
+        URL + cedula
       );
       const data = await response.json();
       // Si no encontramos el cliente, seteamos el error y vaciamos la información del cliente y la fecha de la consulta.
