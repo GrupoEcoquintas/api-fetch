@@ -26,7 +26,7 @@ function App() {
         // Si encontramos el cliente, seteamos la información del cliente y la fecha de la consulta y vaciamos el error.
         setCliente(data.cliente);
         setCliente(data.cliente);
-        setFecha(data.fecha);
+        setFecha(data.date);
         setError(null);
       }
     } catch (err) {
